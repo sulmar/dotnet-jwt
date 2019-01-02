@@ -16,6 +16,8 @@ using System.Web.Http.Filters;
 
 namespace DotnetJWTDemo.Filters
 {
+    // RFC 7519 - JSON Web Token (JWT)
+    // https://tools.ietf.org/html/rfc7519
     public class JWTAuthenticationFilter : AuthorizationFilterAttribute
     {
         public override void OnAuthorization(HttpActionContext actionContext)
