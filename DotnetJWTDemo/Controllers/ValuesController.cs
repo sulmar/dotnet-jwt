@@ -7,6 +7,7 @@ using System.Web.Http;
 
 namespace DotnetJWTDemo.Controllers
 {
+    [Authorize]
     public class ValuesController : ApiController
     {
         // GET api/values
@@ -16,6 +17,7 @@ namespace DotnetJWTDemo.Controllers
         }
 
         // GET api/values/5
+        [Authorize(Roles = "administrator")]
         public string Get(int id)
         {
             return "value";

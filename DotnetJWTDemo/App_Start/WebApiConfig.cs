@@ -1,7 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using DotnetJWTDemo.Filters;
+using DotnetJWTDemo.IServices;
+using DotnetJWTDemo.Services;
 using System.Web.Http;
+using Unity;
+using Unity.Lifetime;
 
 namespace DotnetJWTDemo
 {
@@ -10,6 +12,9 @@ namespace DotnetJWTDemo
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
+            var container = new UnityContainer();
+            container.RegisterType<IUsersService, UsersService>(new HierarchicalLifetimeManager());
+            config.DependencyResolver = new UnityResolver(container);
 
             // Web API routes
             config.MapHttpAttributeRoutes();
@@ -19,6 +24,8 @@ namespace DotnetJWTDemo
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            config.Filters.Add(new JWTAuthenticationFilter());
         }
     }
 }
