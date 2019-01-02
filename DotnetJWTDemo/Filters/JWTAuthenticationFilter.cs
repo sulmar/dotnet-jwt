@@ -47,6 +47,8 @@ namespace DotnetJWTDemo.Filters
                 catch(Exception e)
                 {
                     actionContext.Response = actionContext.Request.CreateResponse(HttpStatusCode.Unauthorized);
+                    actionContext.Response.Headers.WwwAuthenticate.Add(new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", "error=\"invalid_token\""));
+                    
                 }
             }
                
