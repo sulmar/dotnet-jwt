@@ -1,5 +1,5 @@
-# dotnet-jwt
-Przykład autentykacji z użyciem JWT w .NET 4.5
+# Bezpieczeństwo WebApi
+
 
 ## Basic Authentication
 
@@ -23,3 +23,11 @@ Content-Type= application/json
 GET http://localhost:62986/api/values HTTP/1.1 
 Authorization: Basic am9objpqamo= 
 ```
+## JWT Token Authentication
+
+
+
+## Token Authentication
+
+https://www.ecanarys.com/Blogs/ArticleID/308/Token-Based-Authentication-for-Web-APIs
+
