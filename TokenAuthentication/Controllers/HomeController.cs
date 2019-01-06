@@ -4,9 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace BasicAuthentication.Controllers
+namespace TokenAuthentication.Controllers
 {
-
     public class HomeController : Controller
     {
         public ActionResult Index()

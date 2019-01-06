@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JWTAuthentication", "JWTAut
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicAuthentication", "BasicAuthentication\BasicAuthentication.csproj", "{DF909C18-0726-4DB8-89E3-7007B821D8F1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TokenAuthentication", "TokenAuthentication\TokenAuthentication.csproj", "{174B2555-FAAE-4BF6-85C5-A41BEFAF96E0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{DF909C18-0726-4DB8-89E3-7007B821D8F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF909C18-0726-4DB8-89E3-7007B821D8F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF909C18-0726-4DB8-89E3-7007B821D8F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{174B2555-FAAE-4BF6-85C5-A41BEFAF96E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{174B2555-FAAE-4BF6-85C5-A41BEFAF96E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{174B2555-FAAE-4BF6-85C5-A41BEFAF96E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{174B2555-FAAE-4BF6-85C5-A41BEFAF96E0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
