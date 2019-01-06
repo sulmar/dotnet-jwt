@@ -7,6 +7,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Http;
 using Microsoft.Owin.Security.Infrastructure;
+using TokenAuthentication.Providers;
 
 // PM> Install-Package Microsoft.Owin.Host.SystemWeb
 [assembly: OwinStartup(typeof(TokenAuthentication.Startup))]
@@ -35,7 +36,7 @@ namespace TokenAuthentication
                 TokenEndpointPath = new PathString("/token"),
                 AccessTokenExpireTimeSpan = TimeSpan.FromHours(1),
                 Provider = new SimpleAuthorizationServerProvider(),
-                RefreshTokenProvider =  new AuthenticationTokenProvider()
+                RefreshTokenProvider =  new RefreshTokenProvider()
             };
 
             app.UseOAuthAuthorizationServer(options);
